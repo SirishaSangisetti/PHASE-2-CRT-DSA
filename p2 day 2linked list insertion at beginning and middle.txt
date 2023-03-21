@@ -1,0 +1,93 @@
+#linked list insertion at beginning
+class Node:
+    def __init__(self,val):
+        self.data = val
+        self.next = None
+class linkedlist:
+    def add_ele_start(self,head,val):
+        new_node =Node(val)
+        new_node.next=head
+        head=new_node
+        return head
+    def add_ele(self,head,val):
+        new_node =Node(val)#s1
+        temp=head
+        while temp.next!=None:#s2
+            temp=temp.next
+        temp.next = new_node#s3
+
+    def remove_ele(self, head, val):
+        temp = head
+        while temp.next.next != None:  # s2
+            temp = temp.next
+        temp.next = None  # s3
+
+    def print_list(self,head):
+        temp=head   #head cant be changed
+        while temp!=None:
+            print(temp.data,end='>')
+            temp=temp.next
+    def search_ele(self,val):
+        pass
+ob=linkedlist()
+head=Node(10)
+ob.add_ele(head, 30)
+head=ob.add_ele_start(50,head)
+ob.print_list(head)
+
+
+
+
+
+#at middle
+
+#linked list at middle
+class Node:
+    def __init__(self,val):
+        self.data = val
+        self.next = None
+class linkedlist:
+    def add_ele_start(self,head,val):
+        new_node =Node(val)
+        new_node.next=head
+        head = new_node
+    def add_ele(self,head,val):
+        new_node =Node(val)#s1
+        temp=head
+        while temp.next!=None:#s2
+            temp=temp.next
+        temp.next = new_node#s3
+
+    def remove_ele(self, head, val):
+        temp = head
+        while temp.next.next != None:  # s2
+            temp = temp.next
+        temp.next = None  # s3
+
+    def print_list(self,head):
+        temp=head   #head cant be changed
+        while temp!=None:
+            print(temp.data)
+            temp=temp.next
+        print()
+    def search_ele(self,val):
+        pass
+    def insertion(self,head,val,pos):
+        new_node =Node(val)#s1
+        current = head
+        prev = None
+        while pos!= 0:
+            prev = current
+            current = current.next
+            pos = pos-1
+        prev.next = new_node
+        new_node.next=current
+ob=linkedlist()
+head=Node(10)
+ob.add_ele(head,30)
+ob.print_list(head)
+ob.insertion(head,100,1)
+ob.print_list(head)
+
+
+

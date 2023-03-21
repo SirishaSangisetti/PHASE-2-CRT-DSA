@@ -1,0 +1,38 @@
+# searching in tree
+class Node:
+    def __init__(self,value):
+        self.data = value
+        self.left = None
+        self.right = None
+class BST:
+    def add_ele(self,root,value):
+        new_node = Node(value)
+        if new_node.data < root.data:
+            if root.left!= None:
+                self.add_ele(root.left,value)
+            else:
+                root.left = new_node
+        else:
+            if root.right != None:
+                self.add_ele(root.right,value)
+            else:
+                root.right = new_node
+    def search(self,root,value):
+        if root.data == value:
+            return root
+        if  value < root.data and root.left != None:
+            return self.search(root.left,value)
+        if  value > root.data and  root.right != None:
+            return self.search(root.right,value)
+obj=BST()
+root =Node(10)
+obj.add_ele(root,7)
+obj.add_ele(root,40)
+obj.add_ele(root,5)
+obj.add_ele(root,9)
+obj.add_ele(root,15)
+obj.add_ele(root,60)
+if obj.search(root,15):
+     print("ele found")
+else:
+    print("not found")

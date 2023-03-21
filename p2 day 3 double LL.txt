@@ -1,0 +1,38 @@
+# double linkded list implementation
+class Node:
+    def __init__(self,val):
+        self.data =  val
+        self.next = None
+        self.prev = None
+class Doublell:
+    def add_ele(self,head,val):
+        new_node= Node(val)
+        temp = head
+        while temp!= None:
+            temp =temp.next
+            temp.next = new_node
+            new-node.prev = temp
+    def remove(self,head):
+        temp = head
+        while temp.next.next!= 0:
+            temp=temp.next
+            temp.next.prev=None
+            temp.next=None
+    def reverse(self,head):
+        temp=head
+        while temp.next!=None:
+            temp.next=new_node
+        while temp:
+            print('<-',temp.data,sep='',end='')
+            temp=temp.prev
+       print()
+    def print_list(self,head):
+        temp =  head
+        while temp!= None and prev!=None
+            print(temp.data,end='')
+            temp = temp.next
+obj = doubleLl()
+head =Node(5)
+obj.add_ele(head,10)
+obj.add-ele(head,20)
+obj.print_list(head)

@@ -1,0 +1,15 @@
+def reverse_half(self,head):
+    first = head
+    cur = head
+    prev = None
+    n  = 3
+    while n!= 0:
+        temp = cur.next
+        cur.next = prev
+        prev = cur
+        cur = temp
+        n-=1
+    first.next = cur
+    return prev
+        
+   

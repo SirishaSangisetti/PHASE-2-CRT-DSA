@@ -1,0 +1,33 @@
+class Node:
+    def __init__(self,val):
+        self.data = val
+        self.next = None
+class linkedlist:
+    def add_ele(self,head,val):
+        new_node =Node(val)#s1
+        temp=head
+        while temp.next!=None:#s2
+            temp=temp.next
+        temp.next = new_node#s3
+    def reverse(self,head):
+        cur = head
+        prev = None
+        while cur!=None:
+            temp = cur.next
+            cur.next =prev
+            prev = cur
+            cur = temp
+        return prev
+    def print_list(self,head):
+        temp=head   #head cant be changed
+        while temp!=None:
+            print(temp.data,end='->')
+            temp=temp.next
+        print()
+ob=linkedlist()
+head=Node(10)
+ob.add_ele(head,30)
+ob.add_ele(head,20)
+ob.reverse(head)
+ob.print_list(head)
+

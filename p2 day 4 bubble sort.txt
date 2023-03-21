@@ -1,0 +1,29 @@
+#bubble sort - swap with adjacent elements
+def bubble_sort(arr):
+    for i in range(len(arr)-1):
+        for j in range(len(arr)-1-i):
+            if arr[j] > arr[j+1]:
+                swap =  True
+                arr[j],arr[j+1] = arr[j+1],arr[j]
+        if swap == False:
+            break
+    return arr
+arr = [1,4,2,7,9,8]
+print(arr)
+print(bubble_sort(arr))
+
+
+#bubble sort
+def bubble_sort(arr):
+    for i in range(len(arr)-1):
+        for j in range( i+1,len(arr)):
+            arr[i][1] <  arr[j][1]
+            arr[i][1] , arr[j][1] =arr[j][1] , arr[i][1]
+        return arr
+arr=[
+      [1,2]
+      [3,4]
+      [2,1]
+      [56,3]
+ ]
+print(bubble_sort(arr))

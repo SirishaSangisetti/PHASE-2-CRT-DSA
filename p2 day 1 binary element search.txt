@@ -1,0 +1,57 @@
+#element search linear
+time complexity -no of iterations based
+#constants will be eleminated
+#loop variable is multiplied,log(n) will be time complexity
+
+a=list(map(int,input().split()))
+key=int(input())
+for i in range(len(a)):
+    if key==a[i]:
+        print("element found  at  ",i)
+    else:
+        print("not found")
+
+#binary seasrch
+arr=[i for i in range(1,11)]
+print(arr)
+key=3
+low=0
+high=len(arr)-1
+found=False
+while low<=high:
+    mid=(low+high)//2
+    arr[mid]
+    if arr[mid]==key:
+        print("found",mid)
+        found=True
+        break
+    elif key<arr[mid]:
+        high=mid-1
+    elif key>arr[mid]:
+        low=mid+1
+if not found:
+    print("not found")
+
+#using recurrsion
+#using recurrsion 
+def binary_search(arr,low,high,key):
+    while low<=high:
+        mid=(low+high)//2
+        arr[mid]
+        if arr[mid]==key:
+            print("found",mid)
+            return
+        elif key<arr[mid]:
+            high=mid-1
+            return binary_search(arr,low,high,key)
+        elif key>arr[mid]:
+            low=mid+1
+            return binary_search(arr, low, high, key)
+
+print("not found")
+
+arr=[i for i in range(1,11)]
+key=3
+low=0
+high=len(arr)-1
+

@@ -1,0 +1,28 @@
+#Necesssary things
+
+#LINKED LIST,STACK,QUEUE
+
+1. single,doubl linkded list,,stack,queue implementation
+2.insertion at beginning,ending,middle
+3.deletion at start,end,specified position
+4.searching for an element
+5.replacing
+6.reverse
+7.half reverse
+8.one ds to another ds implementaton
+9.balancing parenthesis
+10.application programs
+
+#SEARCHINGS
+
+linear,binary search
+
+flowers program
+2d array start and destination program 
+
+
+
+
+
+ 
+

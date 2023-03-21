@@ -1,0 +1,67 @@
+#tree insertion
+
+class Node:
+    def __init__(self,value)
+    self.data =val
+    self.left = None
+    self.right = None
+class BST:
+    def add_ele(self,root,val):
+        new_node = Node(value)
+        if new_node.data < root.data:
+            if root.left!= None:
+                self.addd_ele(root.left,val)
+            return
+            else:
+                root.left = new_node
+            return
+        else:
+            if root.right! = None:         
+                self.add_ele(root.right,val)
+            else:
+                root.right = new_node
+    def inorder(self,root):
+        if root.left!= None:
+            self.inorder(root.left)
+        print(root.data) 
+        if root.right!=None:
+            self.inorder(root.right)
+    def preorder(self,root):
+        print(root.data)
+        if root.left!= None:
+            self.preorder(root.left)
+        if root.right!=None:
+            self.preorder(root.right)
+    def postorder(self,root):
+        if root.left!= None:
+            self.postorder(root.left)
+        if root.right!=None:
+            self.postorder(root.right)
+        print(root.data) 
+    def levelorder(self,root):
+        q =[]
+        q.append(root)
+        while len(q)!= 0:
+            ele = q.pop(0)
+            if ele.left:
+                q.append(ele.left)
+            if ele.right:
+                q.append(ele.right)
+ 
+       print(ele.data)
+        
+obj=BST()
+root =Node(10)
+obj.add_ele(root,7)
+obj.add_ele(root,40)
+obj.add_ele(root,5)
+obj.add_ele(root,9)
+obj.add_ele(root,15)
+obj.add_ele(root,60)
+obj.inorder(root)
+print()
+obj.preorder(root)
+print()
+obj.postorder(root)
+print()
+obj.levelorder(root)

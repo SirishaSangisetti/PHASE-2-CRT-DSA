@@ -1,0 +1,14 @@
+# Quick sort - select pivot and elements less than pivot are on left side of arr and greater than pivot are on right side of array
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+    left_arr = [i for i in arr[1:] if i<=pivot]
+    right_arr = [i for i in arr[1:] if i > pivot]
+    # print(left_arr)
+    # print(right_arr)
+    return quick_sort(left_arr)+[pivot]+quick_sort(right_arr)
+arr = [1,4,2,7,5,9]
+print(arr)
+res=quick_sort(arr)
+print(res)

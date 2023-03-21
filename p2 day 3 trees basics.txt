@@ -1,0 +1,11 @@
+ #trees
+#binary tree
+atmost 2 children+
+#binary search tree
+atmost 2 children & values should be less than root in left sub tree
+
+#traversal
+in-order:left-root-right
+pre-order:root-left-right
+post-order:left-right-root
+level-order:level wise

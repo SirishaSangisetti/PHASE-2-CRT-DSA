@@ -1,0 +1,36 @@
+# height of tree
+class Node:
+    def __init__(self,value):
+        self.data = value
+        self.left = None
+        self.right = None
+class BST:
+    def add_ele(self,root,value):
+        new_node = Node(value)
+        if new_node.data < root.data:
+            if root.left!= None:
+                self.add_ele(root.left,value)
+            else:
+                root.left = new_node
+        else:
+            if root.right != None:
+                self.add_ele(root.right,value)
+            else:
+                root.right = new_node
+    def height(self,root):
+        if root == None:
+            return -1
+        left_height = self.height(root.left)
+        right_height = self.height(root.right)
+        return 1+max(left_height,right_height)
+obj=BST()
+root =Node(10)
+obj.add_ele(root,7)
+obj.add_ele(root,40)
+obj.add_ele(root,5)
+obj.add_ele(root,9)
+obj.add_ele(root,15)
+obj.add_ele(root,60)
+print(obj.height(root))
+
+
